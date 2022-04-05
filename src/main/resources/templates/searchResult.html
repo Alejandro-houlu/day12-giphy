@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+</head>
+<body>
+    
+        <div class="title" style="text-align: center;">
+        
+                <h1>
+                <code>Giphy API</code>
+                </h1>
+                
+        <table style="margin-left: 40%;">
+                <tr th:each="url : ${imageUrls}">
+                    <td>
+                    <img th:src="@{${url}}">
+                    <br><br>
+                    </td>
+                </tr>
+        </table>
+
+        </div>
+
+
+
+
+</body>
+</html>
