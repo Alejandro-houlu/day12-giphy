@@ -18,7 +18,6 @@ class Day12ApplicationTests {
 	@Test
 	void shouldLoad10Images() {
 		List<String> gifs = gService.getSearchResult("dog");
-		//assertEquals(10, gifs.size(), "Default number of gifs");
 		assertEquals(10, gifs.size(), "Default number of gifs");
 	}
 
