@@ -45,24 +45,4 @@ jobs:
         out_dir: coverage/${{ github.event.repository.name }}
         permission: public-read
 
-name: Deploy to Heroku
-on:
-  push:
-    tags:
-      - 'v*'
-      - '!v*-alpha'
-jobs: 
-  Deploy_to_heroku:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout src
-      uses: actions/checkout@v2
-    - name: Deploy
-      uses: akhileshns/heroku-deploy@v3.12.12
-      with:
-        heroku_api_key: ${{ secrets.heroku.api.key }}
-        heroku_app_name: giphy-heroku
-        heroku_email: ${{ secrets.email }}
-        branch: ${{ github.ref_name }}
-
       
